@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SportSite || Exercise Pool</title>
+
+    <style>
+        body {
+            background-color: #A1C2F1;
+        }
+
+        tr{
+            background-color: white;
+        }
+
+        th{
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        th, td {
+          text-align: left;
+          padding: 10px;
+          border: 3px solid #06283D;
+        }
+
+        .exercise-table__container{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+<div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
+    <a href="http://localhost:8080/SportSite/home">Home</a>
+</div>
+<div class="exercise-table__container">
+    <table>
+        <tr>
+            <th class="th">#</th>
+            <th class="th">id</th>
+            <th class="th">Name</th>
+            <th class="th">Description</th>
+            <th class="th">Is equipment needed</th>
+        </tr>
+        <tr th:each="exercise : ${exercise_list}">
+            <td class="td" th:text="${exerciseStat.index+1}"></td>
+            <td class="td" th:text="${exercise.id}"></td>
+            <td class="td" th:text="${exercise.exerciseName}"></td>
+            <td class="td" th:text="${exercise.exerciseDescription}"></td>
+            <td class="td" th:text="${exercise.isEquipmentNeeded}"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
