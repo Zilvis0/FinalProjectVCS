@@ -1,4 +1,4 @@
-package lt.vcs.final_project.repository;
+package lt.vcs.final_project.exercise_repo;
 
 import jakarta.persistence.*;
 import lombok.Getter;

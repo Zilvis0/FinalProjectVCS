@@ -1,4 +1,4 @@
-package lt.vcs.final_project.repository;
+package lt.vcs.final_project.exercise_repo;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

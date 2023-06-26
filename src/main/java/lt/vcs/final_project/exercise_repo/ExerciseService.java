@@ -1,4 +1,4 @@
-package lt.vcs.final_project.repository;
+package lt.vcs.final_project.exercise_repo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
