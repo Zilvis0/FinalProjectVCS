@@ -16,7 +16,7 @@ import lombok.ToString;
 public class Program {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "program_id")
     private Integer id;
 
     @Column(name = "program_name")
