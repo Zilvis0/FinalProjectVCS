@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>SportSite || Exercise Programs</title>
+
+  <style>
+        body {
+            background-color: #A1C2F1;
+        }
+
+        tr{
+            background-color: white;
+        }
+
+        th{
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        th, td {
+          text-align: left;
+          padding: 10px;
+          border: 3px solid #06283D;
+        }
+
+        .programs__container{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+<div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
+  <a href="http://localhost:8080/SportSite/home">Home</a>
+</div>
+<div class="programs__container">
+  <table>
+    <tr>
+      <th class="th">#</th>
+      <th class="th">id</th>
+      <th class="th">Name</th>
+    </tr>
+    <tr th:each="program : ${program_list}">
+      <td class="td" th:text="${programStat.index+1}"></td>
+      <td class="td" th:text="${program.id}"></td>
+      <td class="td" th:text="${program.exerciseName}"></td>
+
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
