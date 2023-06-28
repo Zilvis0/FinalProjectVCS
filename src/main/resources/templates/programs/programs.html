@@ -48,7 +48,9 @@
     <tr th:each="program : ${program_list}">
       <td class="td" th:text="${programStat.index+1}"></td>
       <td class="td" th:text="${program.id}"></td>
-      <td class="td" th:text="${program.exerciseName}"></td>
+      <td class="td" th:text="${program.programName}"></td>
+      <td class="td"><a th:href="@{'http://localhost:8080/programs/id/' + ${program.id}}">Select program</a></td>
+      <td class="td"><button>delete program</button></td>
 
     </tr>
   </table>
