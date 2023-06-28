@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Program Details</title>
+    <style>
+        body {
+            background-color: #A1C2F1;
+        }
+
+        div{
+            left: 0;
+            right: 0;
+        }
+
+        label{
+            font-style: italic;
+            font-size: 16px;
+            margin-left: 2px;
+        }
+
+        p{
+            background-color: white;
+            margin: 0;
+            margin-bottom: 8px;
+            border: 2px solid black;
+            padding: 10px;
+            font-size: 22px;
+        }
+
+        .program-details-container{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<div class="program-details-container" th:object="${program_object}">
+    <div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
+        <a href="http://localhost:8080/SportSite/home">Home</a>
+    </div>
+    <div>
+        <label>Id</label>
+        <p th:text="*{id}"> Some text here</p>
+    </div>
+    <div>
+        <label>Program Name</label>
+        <p th:text="*{programName}"> Some text here</p>
+    </div>
+<!--    <div>-->
+<!--        <label>Exercises</label>-->
+<!--        <p th:text="${program_object.exercises}"> Some text here</p>-->
+<!--    </div>-->
+    <div>
+        <button>Add more exercises</button>
+    </div>
+</div>
+
+</body>
+</html>

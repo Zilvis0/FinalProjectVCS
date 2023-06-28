@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+  body {
+            background-color: #A1C2F1;
+        }
+
+   label{
+            font-style: italic;
+            font-size: 16px;
+            margin-left: 2px;
+        }
+
+    input{
+            background-color: white;
+            margin: 0;
+            margin-bottom: 8px;
+            border: 3px solid #06283D;
+            padding: 10px;
+            font-size: 22px;
+            }
+
+    .main-container{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text{
+            font-size: 18px;
+        }
+  </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div>
+        <form action="#" th:action="@{/programs/new}" th:object="${key_program}" method="post">
+            <div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
+                <a href="http://localhost:8080/SportSite/home">Home</a>
+            </div>
+            <div>
+                <label>Program name</label>
+                <input type="text" th:field="${key_program.programName}" class="text" style="width: 100%;"/>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" value="Submit" style="background-color: #06283D; color: white;"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
