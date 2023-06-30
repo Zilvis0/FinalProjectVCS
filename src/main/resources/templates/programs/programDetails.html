@@ -63,13 +63,42 @@
         <label>Program Name</label>
         <p th:text="*{programName}"> Some text here</p>
     </div>
-<!--    <div>-->
-<!--        <label>Exercises</label>-->
-<!--        <p th:text="${program_object.exercises}"> Some text here</p>-->
-<!--    </div>-->
     <div>
-        <button>Add more exercises</button>
+        <label>Exercises</label>
+        <table>
+            <tbody>
+                <tr>
+                    <th>
+                        Nr.
+                    </th>
+                    <th>
+                        Exercise Name
+                    </th>
+                    <th>
+                        Exercise Description
+                    </th>
+                </tr>
+                <tr th:each="exercise : ${program_object.exercises}">
+                    <td th:text="${exercise.id}"></td>
+                    <td th:text="${exercise.exerciseName}"></td>
+                    <td th:text="${exercise.exerciseDescription}"></td>
+                    <a th:href="@{/programs/id/{programId}/delete-exercise(exerciseId=${exercise.id}, programId=${program_object.id})}"
+                       onclick="return confirm('Are you sure you want to delete this exercise?')">Delete</a>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <div>
+        <label>Select Exercise:</label>
+        <form method="post" th:action="@{/programs/id/{programId}/add-exercise(programId=${program_object.id})}">
+            <select id="exerciseSelect" name="exerciseId">
+                <option th:each="exercise : ${key_exercise_list}" th:value="${exercise.id}" th:text="${exercise.exerciseName}"></option>
+            </select>
+            <button type="submit">Add Exercise</button>
+        </form>
+    </div>
+
 </div>
 
 </body>
