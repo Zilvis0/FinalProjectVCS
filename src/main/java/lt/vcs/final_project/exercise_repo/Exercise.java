@@ -5,6 +5,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lt.vcs.final_project.program_repo.Program;
+
+import java.util.List;
 
 @Entity
 @Table(name = "exercise_pool")
@@ -26,6 +29,10 @@ public class Exercise {
 
     @Column(name = "is_equipment_needed")
     private Boolean isEquipmentNeeded;
+
+    @ManyToMany(mappedBy = "exercises")
+    private List<Program> programs;
+
 
     public Exercise(String exerciseName, String exerciseDescription, Boolean isEquipmentNeeded) {
         this.exerciseName = exerciseName;

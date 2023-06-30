@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lt.vcs.final_project.exercise_repo.Exercise;
+
+import java.util.List;
 
 @Entity
 @Table(name = "programs")
@@ -21,6 +24,14 @@ public class Program {
 
     @Column(name = "program_name")
     private String programName;
+
+    @ManyToMany
+    @JoinTable(
+            name = "program_exercises",
+            joinColumns = @JoinColumn(name = "program_id"),
+            inverseJoinColumns = @JoinColumn(name = "exercise_id")
+    )
+    private List<Exercise> exercises;
 
     public Program(String programName) {
         this.programName = programName;
