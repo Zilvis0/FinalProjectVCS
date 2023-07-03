@@ -1,30 +1,89 @@
 body {
-            background-color: #A1C2F1;
-        }
+    background-color: #A1C2F1;
+    font-family: 'Roboto', sans-serif;
+}
 
-        div{
-            left: 0;
-            right: 0;
-        }
+div {
+    width: 80%;
+    margin: 0 auto;
+}
 
-        label{
-            font-style: italic;
-            font-size: 16px;
-            margin-left: 2px;
-        }
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 2px;
+}
 
-        p{
-            background-color: white;
-            margin: 0;
-            margin-bottom: 8px;
-            border: 2px solid black;
-            padding: 10px;
-            font-size: 22px;
-        }
+p {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 8px;
+    border: 3px solid #06283D;
+    padding: 10px;
+    font-size: 22px;
+}
 
-        .program-details-container{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+.program-details-container {
+    margin-top: 40px;
+}
+
+.home-link {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.home-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.home-link a:hover {
+    color: #FF8F00;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 10px;
+    border: 3px solid #06283D;
+}
+
+table th {
+    background-color: #06283D;
+    color: white;
+    font-size: 20px;
+}
+
+table td {
+    background-color: white;
+    font-size: 16px;
+}
+
+a {
+    color: #FF8F00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFA726;
+}
+
+button {
+    background-color: #FF8F00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFA726;
+}

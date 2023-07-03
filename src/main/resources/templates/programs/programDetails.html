@@ -1,13 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
 <html lang="en"
       xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -16,17 +7,10 @@
     <link rel="stylesheet" type="text/css" href="/styles/programs/programDetails.css">
 </head>
 <body>
-<div>
-
+<div class="home-link">
+    <a href="http://localhost:8080/SportSite/home">Home</a>
 </div>
 <div class="program-details-container" th:object="${program_object}">
-    <div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
-        <a href="http://localhost:8080/SportSite/home">Home</a>
-    </div>
-    <div>
-        <label>Id</label>
-        <p th:text="*{id}"> Some text here</p>
-    </div>
     <div>
         <label>Program Name</label>
         <p th:text="*{programName}"> Some text here</p>
@@ -34,26 +18,26 @@
     <div>
         <label>Exercises</label>
         <table>
+            <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Exercise Name</th>
+                <th>Exercise Description</th>
+                <th></th>
+            </tr>
+            </thead>
             <tbody>
-                <tr>
-                    <th>
-                        Nr.
-                    </th>
-                    <th>
-                        Exercise Name
-                    </th>
-                    <th>
-                        Exercise Description
-                    </th>
-                    <th/>
-                </tr>
-                <tr th:each="exercise : ${program_object.exercises}">
-                    <td th:text="${exercise.id}"></td>
-                    <td th:text="${exercise.exerciseName}"></td>
-                    <td th:text="${exercise.exerciseDescription}"></td>
-                    <td><a th:href="@{/programs/id/{programId}/delete-exercise(exerciseId=${exercise.id}, programId=${program_object.id})}"
-                       onclick="return confirm('Are you sure you want to delete this exercise?')">Delete</a></td>
-                </tr>
+            <tr th:each="exercise : ${program_object.exercises}">
+                <td class="td" th:text="${exerciseStat.index+1}"></td>
+                <td th:text="${exercise.exerciseName}"></td>
+                <td th:text="${exercise.exerciseDescription}"></td>
+                <td>
+                    <a th:href="@{/programs/id/{programId}/delete-exercise(exerciseId=${exercise.id}, programId=${program_object.id})}"
+                       onclick="return confirm('Are you sure you want to delete this exercise?')">
+                        Delete
+                    </a>
+                </td>
+            </tr>
             </tbody>
         </table>
     </div>
@@ -72,3 +56,4 @@
 
 </body>
 </html>
+

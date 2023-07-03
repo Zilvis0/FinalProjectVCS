@@ -9,23 +9,33 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
 </head>
 <body>
-<div class="menu">
-    <div>
-        <button onclick="window.open('http://localhost:8080/exercises/all', '_self')">Show all exercises</button>
+<div class="container">
+    <div class="menu">
+        <div>
+            <button onclick="window.open('http://localhost:8080/exercises/all', '_self')">Show all exercises</button>
+        </div>
+        <div>
+            <button onclick="window.open('http://localhost:8080/programs/all', '_self')">Show all programs</button>
+        </div>
+        <div>
+            <button onclick="window.open('http://localhost:8080/programs/new', '_self')">Create new program</button>
+        </div>
     </div>
-    <div>
-        <button onclick="window.open('http://localhost:8080/programs/all', '_self')">Show all programs</button>
-    </div>
-    <div>
-        <button onclick="window.open('http://localhost:8080/programs/new', '_self')">Create new program</button>
+
+    <div class="carousel">
+        <img class="active" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZXhlcmNpc2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80"
+             alt="Exercise 1">
+        <img src="https://c4.wallpaperflare.com/wallpaper/751/301/169/crossfit-gym-group-workout-wallpaper-preview.jpg"
+             alt="Exercise 2">
+        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?cs=srgb&dl=pexels-victor-freitas-841130.jpg&fm=jpg"
+             alt="Exercise 3">
+        <img src="https://freedesignfile.com/upload/2016/10/In-the-gym-to-do-the-recommended-exercise-HD-picture.jpg"
+             alt="Exercise 4">
+        <img src="https://burst.shopifycdn.com/photos/core-strength-fitness.jpg?width=1200&format=pjpg&exif=1&iptc=1"
+             alt="Exercise 5">
     </div>
 </div>
 
-<div class="carousel">
-    <!-- Add your carousel content here -->
-    <img src="exercise1.jpg" alt="Exercise 1">
-    <img src="exercise2.jpg" alt="Exercise 2">
-    <img src="exercise3.jpg" alt="Exercise 3">
-</div>
+<script src="/scripts/home.js"></script>
 </body>
 </html>

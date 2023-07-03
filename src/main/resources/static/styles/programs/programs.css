@@ -1,29 +1,107 @@
 body {
-            background-color: #A1C2F1;
-        }
+    background-color: #A1C2F1;
+    font-family: 'Roboto', sans-serif;
+}
 
-        tr{
-            background-color: white;
-        }
+form {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        th{
-            font-style: italic;
-            font-size: 16px;
-        }
+form label {
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        th, td {
-          text-align: left;
-          padding: 10px;
-          border: 3px solid #06283D;
-        }
+form input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    border: 3px solid #06283D;
+    border-radius: 8px;
+}
 
-        .programs__container{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+form input[type="submit"] {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #06283D;
+    color: white;
+    cursor: pointer;
+}
 
-         .text{
-            font-size: 18px;
-        }
+table {
+    width: 100%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #06283D;
+}
+
+thead th {
+    color: white;
+    font-size: 20px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ECEFF1;
+}
+
+tbody td:nth-child(1) {
+    width: 15%;
+}
+
+tbody td:nth-child(2) {
+    width: 55%;
+}
+
+tbody td:nth-child(3) {
+    width: 15%;
+}
+
+tbody td:nth-child(4) {
+    width: 15%;
+}
+
+tbody td, tbody th {
+    text-align: left;
+    padding: 10px;
+    border: 3px solid #06283D;
+}
+
+.td, .th {
+    font-size: 16px;
+}
+
+a {
+    color: #FF8F00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFA726;
+}
+
+button {
+    background-color: #FF8F00;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #FFA726;
+}
+

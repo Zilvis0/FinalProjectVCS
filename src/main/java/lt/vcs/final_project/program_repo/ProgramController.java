@@ -104,4 +104,9 @@ public class ProgramController {
         return "redirect:/programs/id/" + program.getId();
     }
 
+    @PostMapping("/id/{programId}/delete")
+    public String deleteProgramFromProgramsPage(@PathVariable("programId") Integer programId) {
+        programService.deleteProgram(programId);
+        return "redirect:/programs/all";
+    }
 }

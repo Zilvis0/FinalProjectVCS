@@ -8,25 +8,27 @@
 
 </head>
 <body>
-<div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
+<div class="home-link">
     <a href="http://localhost:8080/SportSite/home">Home</a>
 </div>
 <div class="exercise-table__container">
     <table>
+        <thead>
         <tr>
             <th class="th">#</th>
-            <th class="th">id</th>
             <th class="th">Name</th>
             <th class="th">Description</th>
             <th class="th">Is equipment needed</th>
         </tr>
+        </thead>
+        <tbody>
         <tr th:each="exercise : ${exercise_list}">
             <td class="td" th:text="${exerciseStat.index+1}"></td>
-            <td class="td" th:text="${exercise.id}"></td>
             <td class="td" th:text="${exercise.exerciseName}"></td>
             <td class="td" th:text="${exercise.exerciseDescription}"></td>
             <td class="td" th:text="${exercise.isEquipmentNeeded}"></td>
         </tr>
+        </tbody>
     </table>
 </div>
 

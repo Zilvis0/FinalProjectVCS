@@ -1,29 +1,63 @@
 body {
-            background-color: #A1C2F1;
-        }
+    background-color: #A1C2F1;
+    font-family: 'Roboto', sans-serif;
+}
 
-   label{
-            font-style: italic;
-            font-size: 16px;
-            margin-left: 2px;
-        }
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+}
 
-    input{
-            background-color: white;
-            margin: 0;
-            margin-bottom: 8px;
-            border: 3px solid #06283D;
-            padding: 10px;
-            font-size: 22px;
-            }
+.home-link {
+    text-align: right;
+    margin-bottom: 20px;
+}
 
-    .main-container{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+.home-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        .text{
-            font-size: 18px;
-        }
+.home-link a:hover {
+    color: #FF8F00;
+}
+
+.form-container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 2px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #06283D;
+    border-radius: 8px;
+}
+
+input[type="submit"] {
+    width: 20%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #06283D;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF8F00;
+}

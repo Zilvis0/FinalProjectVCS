@@ -10,17 +10,17 @@
 <body>
 
 <div class="main-container">
-    <div>
+    <div class="home-link">
+        <a href="http://localhost:8080/SportSite/home">Home</a>
+    </div>
+    <div class="form-container">
         <form action="#" th:action="@{/programs/new}" th:object="${key_program}" method="post">
-            <div style="text-align: right; margin-bottom: 36px; margin-right: 8px;">
-                <a href="http://localhost:8080/SportSite/home">Home</a>
-            </div>
-            <div>
+            <div class="form-group">
                 <label>Program name</label>
-                <input type="text" th:field="${key_program.programName}" class="text" style="width: 100%;"/>
+                <input type="text" th:field="${key_program.programName}" class="text"/>
             </div>
-            <div style="text-align: center;">
-                <input type="submit" value="Submit" style="background-color: #06283D; color: white;"/>
+            <div class="form-group">
+                <input type="submit" value="Submit"/>
             </div>
         </form>
     </div>

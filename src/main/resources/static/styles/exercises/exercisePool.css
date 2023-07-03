@@ -1,25 +1,53 @@
 body {
-            background-color: #A1C2F1;
-        }
+    background-color: #FFB74D;
+    font-family: 'Roboto', sans-serif;
+}
 
-        tr{
-            background-color: white;
-        }
+.home-link {
+    text-align: right;
+    margin: 20px;
+}
 
-        th{
-            font-style: italic;
-            font-size: 16px;
-        }
+.home-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
 
-        th, td {
-          text-align: left;
-          padding: 10px;
-          border: 3px solid #06283D;
-        }
+.home-link a:hover {
+    color: #A1C2F1;
+}
 
-        .exercise-table__container{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #06283D;
+}
+
+thead th {
+    color: white;
+    font-size: 20px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ECEFF1;
+}
+
+tbody td, tbody th {
+    text-align: left;
+    padding: 10px;
+    border: 3px solid #06283D;
+}
+
+.td, .th {
+    font-size: 16px;
+}
