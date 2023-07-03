@@ -1,0 +1,29 @@
+body {
+            background-color: #A1C2F1;
+        }
+
+   label{
+            font-style: italic;
+            font-size: 16px;
+            margin-left: 2px;
+        }
+
+    input{
+            background-color: white;
+            margin: 0;
+            margin-bottom: 8px;
+            border: 3px solid #06283D;
+            padding: 10px;
+            font-size: 22px;
+            }
+
+    .main-container{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text{
+            font-size: 18px;
+        }
