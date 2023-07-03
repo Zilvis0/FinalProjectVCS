@@ -101,7 +101,7 @@ public class ProgramController {
             @ModelAttribute(value = "key_program") Program program
     ){
         programService.saveProgram(program);
-        model.addAttribute("program_object", program);
-        return "/programs/programDetails";
+        return "redirect:/programs/id/" + program.getId();
     }
+
 }
