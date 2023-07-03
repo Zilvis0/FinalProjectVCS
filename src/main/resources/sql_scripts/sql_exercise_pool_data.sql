@@ -2,37 +2,26 @@
 
 -- SELECT * FROM final_project.exercise_pool;
 
--- INSERT INTO final_project.exercise_pool
--- (exercise_id, exercise_name, exercise_description, is_equipment_needed)
--- VALUE(1,
--- "pull_ups",
---  "The pull-up is a closed-chain movement where the body is suspended by the hands, gripping a bar or other implement at a distance typically wider than shoulder-width, and pulled up. As this happens, the elbows flex and the shoulders adduct and extend to bring the elbows to the torso",
---   true);
-
--- INSERT INTO final_project.exercise_pool
--- (exercise_id, exercise_name, exercise_description, is_equipment_needed)
--- VALUE(2,
--- "burpee",
---  "Start by standing erect with the arms by the side, feet should-width apart. Bend the knees, squatting down to place the hands on the floor in front of the feet. Putting the bodyweight on the hands, the legs are thrust back to a push-up position with a straight line from the shoulders to the heels. Next pull the legs back and return to the squatting position. Jump back to the starting standing position.",
---   false);
-
--- INSERT INTO final_project.exercise_pool
--- (exercise_id, exercise_name, exercise_description, is_equipment_needed)
--- VALUE(3,
---  "biceps curl",
---  "A full repetition consists of bending or 'curling' the elbow until it is fully flexed, then slowly lowering the weight to the starting position. The torso should remain upright instead of swinging back and forth, as doing so transfers the load away from the biceps and onto other muscles, reducing the effectiveness of the exercise.",
---   true);
-
--- INSERT INTO final_project.exercise_pool
--- (exercise_id, exercise_name, exercise_description, is_equipment_needed)
--- VALUE(4,
---  "bench press",
---   "The person performing the exercise lies on their back on a flat bench with a barbell grasped in both hands. They lower the barbell to chest level until it touches the chest, then press the barbell upwards, extending the arms until the elbows are locked out. This is one repetition (rep). ",
---  true);
-
--- INSERT INTO final_project.exercise_pool
--- (exercise_id, exercise_name, exercise_description, is_equipment_needed)
--- VALUE(5,
---  "squat",
---  "the trainee lowers their hips from a standing position and then stands back up.",
---   false);
+--INSERT INTO final_project.exercise_pool
+--(exercise_id, exercise_name, exercise_description, is_equipment_needed)
+--VALUES
+--  (1, 'pull_ups', 'The pull-up is a closed-chain movement where the body is suspended by the hands, gripping a bar or other implement at a distance typically wider than shoulder-width, and pulled up. As this happens, the elbows flex and the shoulders adduct and extend to bring the elbows to the torso.', true),
+--  (2, 'burpee', 'Start by standing erect with the arms by the side, feet should-width apart. Bend the knees, squatting down to place the hands on the floor in front of the feet. Putting the bodyweight on the hands, the legs are thrust back to a push-up position with a straight line from the shoulders to the heels. Next, pull the legs back and return to the squatting position. Jump back to the starting standing position.', false),
+--  (3, 'biceps curl', 'A full repetition consists of bending or "curling" the elbow until it is fully flexed, then slowly lowering the weight to the starting position. The torso should remain upright instead of swinging back and forth, as doing so transfers the load away from the biceps and onto other muscles, reducing the effectiveness of the exercise.', true),
+--  (4, 'bench press', 'The person performing the exercise lies on their back on a flat bench with a barbell grasped in both hands. They lower the barbell to chest level until it touches the chest, then press the barbell upwards, extending the arms until the elbows are locked out. This is one repetition (rep).', true),
+--  (5, 'squat', 'The trainee lowers their hips from a standing position and then stands back up.', false),
+--  (6, 'lunges', 'Stand tall with your feet hip-width apart and hands on your hips. Step forward with your right leg and slowly lower your body until your right knee is bent at least 90 degrees. Push back up to the starting position and repeat with your left leg.', false),
+--  (7, 'deadlift', 'Start with your feet hip-width apart and your toes under the bar. Bend your knees and grip the bar with a shoulder-width grip. Keep your back straight, lift your chest, and straighten your knees. Pull the bar up by extending your hips until you are standing tall. Lower the bar by bending your hips and knees.', true),
+--  (8, 'plank', 'Start on your hands and knees, with your hands directly under your shoulders. Step your feet back one at a time, coming into a plank position. Engage your core and squeeze your glutes to stabilize your body. Hold this position for the desired amount of time.', false),
+--  (9, 'push-ups', 'Start in a high plank position with your hands slightly wider than shoulder-width apart. Lower your body down until your chest nearly touches the floor, then push yourself back up to the starting position.', false),
+--  (10, 'sit-ups', 'Lie flat on your back with your knees bent and feet flat on the ground. Place your hands behind your head or cross them over your chest. Contract your abs and lift your upper body off the ground, reaching your chest toward your knees. Lower yourself back down to the starting position.', false),
+--  (11, 'shoulder press', 'Sit on a bench with back support and hold a dumbbell in each hand at shoulder level with palms facing forward. Press the dumbbells upward until your arms are extended overhead. Lower the dumbbells back to shoulder level and repeat.', true),
+--  (12, 'crunches', 'Lie flat on your back with your knees bent and feet flat on the ground. Place your hands behind your head or cross them over your chest. Contract your abdominal muscles and lift your upper body off the ground, curling your shoulders towards your pelvis. Slowly lower yourself back down to the starting position.', false),
+--  (13, 'running', 'Engage in continuous and rhythmic movement by swiftly moving your legs and arms. Maintain a pace that challenges your cardiovascular system.', false),
+--  (14, 'tricep dips', 'Sit on the edge of a bench or chair with your hands gripping the edge beside your hips. Walk your feet forward, sliding your buttocks off the bench. Lower your body by bending your elbows, then push yourself back up to the starting position.', false),
+--  (15, 'mountain climbers', 'Start in a high plank position with your hands directly under your shoulders. Bring your right knee towards your chest, then quickly switch legs, bringing the left knee towards your chest while extending the right leg back. Continue alternating in a "running" motion.', false),
+--  (16, 'Russian twists', 'Sit on the ground with your knees bent and your heels a few inches off the ground. Lean back slightly and bring your hands together in front of your chest. Twist your torso to the right, bringing your hands towards the ground beside your hip. Then twist to the left, bringing your hands towards the ground beside your other hip. Continue alternating sides.', false),
+--  (17, 'jumping jacks', 'Start by standing with your feet together and arms by your sides. Jump up, spreading your feet wider than shoulder-width apart and raising your arms overhead. Quickly reverse the movement by jumping back to the starting position.', false),
+--  (18, 'plank jacks', 'Start in a high plank position with your hands directly under your shoulders. Jump your feet wide, then quickly jump them back together. Continue alternating the jumping motion.', false),
+--  (19, 'bicycle crunches', 'Lie flat on your back with your hands behind your head and your legs lifted and bent at a 90-degree angle. Bring your right elbow towards your left knee while simultaneously straightening your right leg. Then switch, bringing your left elbow towards your right knee while straightening your left leg. Continue alternating sides.', false),
+--  (20, 'wall sit', 'Lean your back against a wall and slide down until your thighs are parallel to the ground, as if sitting on an invisible chair. Keep your back against the wall and hold this position for the desired amount of time.', false);
